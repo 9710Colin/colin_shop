@@ -1,0 +1,33 @@
+server:
+  port: 8097
+spring:
+  application:
+    name: auth-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+wlkg:
+  jwt:
+    secret: wlkg@Login(Auth}*^31)&heihei% # 登录校验的密钥
+    pubKeyPath: E:/jwtTest/rsa/rsa.pub # 公钥地址
+    priKeyPath: E:/jwtTest/rsa/rsa.pri # 私钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: WLKG_TOKEN
+### 这个IFeignService是加了@FeignClient注解的类
+#IFeignService:
+#  ribbon:
+#    listOfServers: http://localhost:8096     #服务提供者的地址，不是服务注册中心的地址
+#
+### 这个要有，如果不加，只加了上面也没用
+#ribbon:
+#  eureka:
+#    enabled: false
+

@@ -1,0 +1,58 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: wlkg-api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+zuul:
+  prefix: /api # 添加路由前缀
+  retryable: true #开启重启
+  routes:
+    item-service: /item/** # 将商品微服务映射到/item/**
+    search-service: /search/** # 将商品微服务映射到/search/**
+    user-service: /user/** # 将用户微服务映射到/user/**
+    auth-service: /auth/**
+  add-host-header: true #携带请求本身的host头信息
+  sensitive-headers: #头信息为空 null意思就是不过滤任何头信息
+
+  ignored-services:
+    - upload-service #进行服务过滤 忽略upload-service服务
+  ignored-patterns: /upload/** #忽略不希望路由的URL路径
+
+
+ribbon:
+  ConnectTimeout: 250 # 连接超时时间(ms)
+  ReadTimeout: 2000 # 通信超时时间(ms)
+  OkToRetryOnAllOperations: true # 是否对所有操作重试
+  MaxAutoRetriesNextServer: 1 # 同一服务不同实例的重试次数
+  MaxAutoRetries: 1 # 同一实例的重试次数
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000 # 熔断超时时长：10000ms
+wlkg:
+  jwt:
+    pubKeyPath: E:/jwtTest/rsa/rsa.pub # 公钥地址
+    cookieName: WLKG_TOKEN # cookie的名称
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/code
+      - /api/item
+      - /api/user/query #测试接口
+
