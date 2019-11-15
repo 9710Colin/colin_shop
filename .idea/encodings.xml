@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-api-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-auth-center" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-auth-center/wlkg-auth-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-auth-center/wlkg-auth-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-goods-page" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-item" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-item/wlkg-item-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-item/wlkg-item-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-register" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-upload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-user/wlkg-user-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wlkg-user/wlkg-user-service" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

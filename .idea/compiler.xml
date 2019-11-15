@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wlkg-api-gateway" />
+        <module name="wlkg-goods-page" />
+        <module name="wlkg-search" />
+        <module name="wlkg-item-interface" />
+        <module name="wlkg-sms" />
+        <module name="wlkg-item-service" />
+        <module name="wlkg-register" />
+        <module name="wlkg-upload" />
+        <module name="wlkg-common" />
+        <module name="wlkg-user-service" />
+        <module name="wlkg-auth-common" />
+        <module name="wlkg-user-interface" />
+        <module name="wlkg-auth-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="wlkg-api-gateway" options="-parameters" />
+      <module name="wlkg-auth-center" options="-parameters" />
+      <module name="wlkg-auth-common" options="-parameters" />
+      <module name="wlkg-auth-service" options="-parameters" />
+      <module name="wlkg-common" options="-parameters" />
+      <module name="wlkg-goods-page" options="-parameters" />
+      <module name="wlkg-item" options="-parameters" />
+      <module name="wlkg-item-interface" options="-parameters" />
+      <module name="wlkg-item-service" options="-parameters" />
+      <module name="wlkg-register" options="-parameters" />
+      <module name="wlkg-search" options="-parameters" />
+      <module name="wlkg-sms" options="-parameters" />
+      <module name="wlkg-upload" options="-parameters" />
+      <module name="wlkg-user" options="-parameters" />
+      <module name="wlkg-user-interface" options="-parameters" />
+      <module name="wlkg-user-service" options="-parameters" />
+    </option>
+  </component>
+</project>
